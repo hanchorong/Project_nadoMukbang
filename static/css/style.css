@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+nav {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 56px;
+  outline: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+nav.main ul {
+  display: flex;
+  width: 70%;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+}
+nav .category {
+  font-weight: 500;
+}
+nav .category li {
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+nav .category li:hover {
+  background-color: rgba(221, 221, 221, 0.696);
+  border-radius: 8px;
+  cursor: pointer;
+}
+nav .category li:hover a {
+  color: #fca903;
+}
+nav .logo {
+  font-family: "Fredoka One", cursive;
+}
+#login {
+  position: absolute;
+  padding: 0.85rem;
+  background-color: #fcba03;
+  border-radius: 10px;
+  right: 2rem;
+  color: #fff;
+  font-family: "Fredoka One", cursive;
+}
+/* section 1 */
+section.sec1 {
+  position: relative;
+  background-color: #fcba03;
+  width: 100%;
+  height: 100vh;
+}
+.titleArea {
+  position: absolute;
+  width: 45vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Fredoka One", cursive;
+}
+section.sec1 .titleArea h1 {
+  font-weight: 900;
+  text-align: center;
+  line-height: 75px;
+}
+section.sec1 .titleArea h1 span {
+  font-size: 100px;
+  color: #d2420b;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.search {
+  margin: 3rem;
+}
+
+/* section 2 */
+.sec2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+#carouselExampleFade {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 45%;
+  margin: 0 auto;
+}
+.sec2 .title {
+  position: absolute;
+  top: -5rem;
+  left: 2rem;
+  font-weight: 700;
+  font-family: "Fredoka One", cursive;
+}
+#carouselExampleFade .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+#carouselExampleFade .carousel-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#carouselExampleFade .carousel-inner a {
+  position: relative;
+  width: 28vw;
+  height: 100%;
+}
+#carouselExampleFade .carousel-inner img {
+  width: 100%;
+  height: inherit;
+}
+#carouselExampleFade .carousel-inner span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}

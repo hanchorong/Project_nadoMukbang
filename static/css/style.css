@@ -7,6 +7,8 @@
 }
 body {
   font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
 ul {
   list-style: none;
@@ -32,15 +34,21 @@ nav {
   background-color: #fff;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
-nav.main ul {
+nav.main ul:first-child {
   display: flex;
   width: 70%;
   height: 40px;
   justify-content: space-between;
   align-items: center;
   margin: 0 2rem;
+  flex-direction: row;
 }
 nav .category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 70%;
   font-weight: 500;
 }
 nav .category li {
@@ -69,6 +77,66 @@ nav .logo {
   color: #fff;
   font-family: "Fredoka One", cursive;
 }
+/* nav xs */
+.categoryXs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  display: none;
+  cursor: pointer;
+}
+.categoryXs #navBTN {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+.categoryXs .navXsList {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 40vh;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 2rem;
+  z-index: -1;
+  display: none;
+  box-shadow: 0 7px 6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+@media (max-width: 832px) {
+  /* section1 title */
+  .titleArea h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .titleArea h1 span {
+    font-size: 3.5rem !important;
+  }
+}
+@media (max-width: 576px) {
+  /* nav */
+  .category {
+    display: none !important;
+  }
+  .categoryXs {
+    display: block !important;
+  }
+  #login {
+    display: none;
+  }
+  /* section1 title */
+  .titleArea h1 {
+    font-size: 2rem;
+    line-height: 3rem !important;
+  }
+  .titleArea h1 span {
+    font-size: 2.5rem !important;
+  }
+}
 /* section 1 */
 section.sec1 {
   position: relative;
@@ -79,18 +147,35 @@ section.sec1 {
 .titleArea {
   position: absolute;
   width: 45vw;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -45%);
   font-family: "Fredoka One", cursive;
 }
 section.sec1 .titleArea h1 {
+  min-width: 200px;
+  max-width: 430px;
+  min-height: auto;
+  /* max-height: auto; */
   font-weight: 900;
   text-align: center;
   line-height: 75px;
+  /* font-size: 2.2rem; */
+  animation-name: mainLetter;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+@keyframes mainLetter {
+  from {
+    left: 120%;
+  }
+  to {
+    left: 0;
+  }
 }
 section.sec1 .titleArea h1 span {
-  font-size: 100px;
+  font-size: 7rem;
   color: #d2420b;
   font-family: "Noto Sans KR", sans-serif;
 }

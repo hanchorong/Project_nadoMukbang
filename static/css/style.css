@@ -22,6 +22,7 @@ a {
 :root {
   --main-color: #fcba03;
   --sub-color: #d2420b;
+  --sub-green: #198754;
 }
 nav {
   position: fixed;
@@ -128,6 +129,12 @@ nav .logo {
   #login {
     display: none;
   }
+  .search .d-flex {
+    flex-direction: column;
+  }
+  .search .d-flex input {
+    margin-bottom: 0.75rem;
+  }
   /* section1 title */
   .titleArea h1 {
     font-size: 2rem;
@@ -135,6 +142,20 @@ nav .logo {
   }
   .titleArea h1 span {
     font-size: 2.5rem !important;
+  }
+  #carouselExampleFade {
+    height: 70% !important;
+  }
+  .carousel-item {
+    flex-direction: column !important;
+  }
+  .carousel-item a {
+    width: 40vw !important;
+    height: 100% !important;
+    margin-bottom: 0.3rem;
+  }
+  footer .logoArea h1 {
+    font-size: 1.5rem !important;
   }
 }
 /* section 1 */
@@ -147,10 +168,22 @@ section.sec1 {
 .titleArea {
   position: absolute;
   width: 45vw;
-  top: 55%;
+  top: 47%;
   left: 50%;
-  transform: translate(-50%, -45%);
+  transform: translate(-50%, -53%);
   font-family: "Fredoka One", cursive;
+  animation-name: mainLetter;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes mainLetter {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 47%;
+  }
 }
 section.sec1 .titleArea h1 {
   min-width: 200px;
@@ -161,18 +194,6 @@ section.sec1 .titleArea h1 {
   text-align: center;
   line-height: 75px;
   /* font-size: 2.2rem; */
-  animation-name: mainLetter;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-}
-@keyframes mainLetter {
-  from {
-    left: 120%;
-  }
-  to {
-    left: 0;
-  }
 }
 section.sec1 .titleArea h1 span {
   font-size: 7rem;
@@ -180,7 +201,11 @@ section.sec1 .titleArea h1 span {
   font-family: "Noto Sans KR", sans-serif;
 }
 .search {
-  margin: 3rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45vw;
 }
 
 /* section 2 */
@@ -225,25 +250,36 @@ section.sec1 .titleArea h1 span {
   border-radius: 10px;
   overflow: hidden;
 }
+#carouselExampleFade .carousel-inner a:hover .article {
+  bottom: 0;
+}
 #carouselExampleFade .carousel-inner img {
   width: 100%;
   height: inherit;
 }
-#carouselExampleFade .carousel-inner span {
+#carouselExampleFade .carousel-inner .article {
   position: absolute;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0.8rem;
   left: 50%;
+  bottom: -4.5rem;
   transform: translateX(-50%);
-  bottom: 2rem;
-  padding: 0.5rem 1rem;
-  box-sizing: border-box;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
   font-weight: 600;
+  text-align: center;
   color: #fff;
-  border-radius: 20px;
-  background-color: var(--sub-color);
-  box-shadow: 0px 2px 8px rgba(130, 18, 18, 0.7);
+  border-radius: 20px 20px 0 0;
+  background-color: #198754;
+  background-image: linear-gradient(132deg, #f4d03f 0%, #198754 100%);
+  box-shadow: 2px 2px 7px rgba(4, 93, 6, 0.8);
+  display: flex;
+  flex-direction: column;
 }
-
+#carouselExampleFade .carousel-inner .article span:first-child {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 /* section3 */
 .sec3 {
   width: 100%;
@@ -291,8 +327,8 @@ section.sec1 .titleArea h1 span {
   width: 100%;
   height: 100%;
 }
-.sec3 .listBox a:hover {
-  transform: scale(1.1);
+.sec3 .listBox a:hover img {
+  transform: scale(1.4);
 }
 
 /* footer */

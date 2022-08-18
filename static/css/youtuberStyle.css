@@ -1,0 +1,77 @@
+.youSec1 {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: var(--main-color);
+  padding-top: 20px;
+}
+.youSec1 .youtuberImg {
+  background: url("../img/creator1.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 450px;
+  height: 450px;
+  border-radius: 100%;
+  margin: 0 auto;
+  box-shadow: inset -2px -3px 8px rgb(235, 94, 6, 0.8);
+}
+.youSec1 .youtuberImg .name {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 3px 8px rgb(235, 94, 6, 0.8);
+}
+.youSec2 {
+  width: 100%;
+  padding: 3rem 0;
+}
+.youtuberPage .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+.youSec2 .category {
+  width: 600px;
+  height: 100px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.youSec2 .category button {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background: rgb(25, 135, 84);
+  background: linear-gradient(
+    180deg,
+    rgba(25, 135, 84, 1) 0%,
+    rgba(238, 206, 1, 0.8) 100%
+  );
+  box-shadow: 0px 2px 3px var(--sub-green);
+}
+.youSec2 .category button i {
+  font-size: 2rem;
+  color: #fff;
+}
+.youSec2 .category button span {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  width: 100%;
+  text-overflow: inherit;
+}
+.youSec2 .category button:hover span {
+  color: var(--sub-green);
+}
+.youSec3 {
+  padding: 2rem 0 5rem;
+}

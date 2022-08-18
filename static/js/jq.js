@@ -14,4 +14,22 @@ $(function () {
       });
     }
   });
+  // search youtuber
+  $("#submit").on("click", function () {
+    var name = $("#searchInput").val();
+    if (name == "입짧은 햇님" || name == "입짧은" || name == "햇님") {
+      console.log("성공");
+      window.location.replace("/youtuber1");
+    } else if (name == "쯔양") {
+      window.location.replace("/youtuber1");
+    } else if (name == "히밥") {
+      window.location.replace("/youtuber1");
+    } else if (name == "웅이") {
+      window.location.replace("/youtuber1");
+    } else if (name == "여수언니" || name == "여수") {
+      window.location.replace("/youtuber1");
+    } else if (name == "문복희" || name == "복희") {
+      window.location.replace("/youtuber1");
+    }
+  });
 });

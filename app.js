@@ -13,3 +13,7 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log("server open", port);
 });
+
+app.get("/youtuber1", (req, res) => {
+  res.render("youtuber1");
+});

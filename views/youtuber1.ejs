@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>나도먹방! 유튜버맛집찾기</title>
+    <title>nado mukbang! 입짧은 햇님</title>
     <!-- boot -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -42,10 +42,11 @@
     ></script>
     <!-- custom css -->
     <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/youtuberStyle.css" />
     <!-- jq -->
     <script src="../static/js/jq.js"></script>
   </head>
-  <body>
+  <body class="youtuberPage">
     <nav class="main">
       <ul>
         <li class="logo"><a href="#">nado mukbang</a></li>
@@ -83,116 +84,51 @@
         </ul>
       </ul>
     </nav>
-    <section class="sec1">
-      <div class="titleArea">
-        <h1>
-          먹방 유튜버들은<br />
-          도대체
-          <span>어디서(where)</span>
-          시켜<br />먹는거야?
-        </h1>
-      </div>
-      <div class="search">
-        <form class="d-flex" role="search" onsubmit="return false;">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="먹방유튜버 이름"
-            aria-label="Search"
-            id="searchInput"
-          />
-          <button class="btn btn-outline-success" type="button" id="submit">
-            Search
-          </button>
-        </form>
+    <section class="youSec1">
+      <div class="youtuberImg">
+        <div class="name">"입짧은 햇님"</div>
       </div>
     </section>
-    <section class="sec2">
-      <div
-        id="carouselExampleFade"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
-        <h1 class="title">Creator</h1>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="/youtuber1"
-              ><img src="../static/img/creator1.jpeg" class="" alt="햇님" />
-              <div class="article">
-                <span>입짧은 햇님</span>
-                <span>한 종류의 음식만은 많이 먹지 못하는 유튜버</span>
-                <span>구독자 181만</span>
-              </div>
-            </a>
-            <a href="/youtuber1"
-              ><img src="../static/img/creator2.jpeg" class="" alt="쯔양" />
-              <div class="article">
-                <span>쯔양</span>
-                <span>먹방계의 왕중의 왕(살이 안찌는 체질..부럽)</span>
-                <span>구독자 181만</span>
-              </div>
-            </a>
-            <a href="/youtuber1"
-              ><img src="../static/img/creator3.jpeg" class="" alt="히밥" />
-              <div class="article">
-                <span>히밥</span>
-                <span>먹는 속도가 빠른 음식 디펜스 유튜버</span>
-                <span>구독자 134만</span>
-              </div>
-            </a>
-          </div>
-          <div class="carousel-item active">
-            <a href="/youtuber1"
-              ><img src="../static/img/creator4.jpeg" class="" alt="웅이" />
-              <div class="article">
-                <span>웅이</span>
-                <span>먹방 남자 유튜버중 탑티어</span>
-                <span>구독자 106만</span>
-              </div>
-            </a>
-            <a href="/youtuber1"
-              ><img src="../static/img/creator5.jpeg" class="" alt="여수언니" />
-              <div class="article">
-                <span>여수언니</span>
-                <span>옆진언니 같지만 근육을 소유한 유튜버</span>
-                <span>구독자 60만</span>
-              </div>
-            </a>
-            <a href="/youtuber1"
-              ><img src="../static/img/creator6.jpeg" class="" alt="문복희" />
-              <div class="article">
-                <span>문복희</span>
-                <span>얼짱 먹방 유튜버</span>
-                <span>구독자 814만</span>
-              </div>
-            </a>
-          </div>
-        </div>
+    <section class="youSec2">
+      <div class="title">뭘 따라 먹어 볼까?</div>
+      <div class="category">
+        <button>
+          <i class="fa-solid fa-ice-cream"></i><span>디저트</span>
+        </button>
+        <button>
+          <i class="fa-solid fa-drumstick-bite"></i><span>치킨</span>
+        </button>
+        <button><i class="fa-solid fa-bowl-food"></i><span>한식</span></button>
+        <button>
+          <i class="fa-solid fa-bell-concierge"></i><span>중식</span>
+        </button>
+        <button><i class="fa-solid fa-fish-fins"></i><span>일식</span></button>
+        <button>
+          <i class="fa-solid fa-pizza-slice"></i><span>양식</span>
+        </button>
       </div>
     </section>
-
-    <!-- section3 -->
-    <section class="sec3">
-      <h1 class="title">최근 먹방</h1>
+    <section class="youSec3">
+      <div class="title">햇님의 최근 먹방</div>
       <hr />
       <div class="listBox">
         <a href="https://www.youtube.com/watch?v=KLWJCRMr-kg" target="_blank"
-          ><img class="lazy" data-src="../static/img/media1.webp"
+          ><img class="lazy" data-src="../static/img/sun1.webp"
         /></a>
         <a href="https://www.youtube.com/watch?v=Lm9JRlYxFG4" target="_blank"
-          ><img class="lazy" data-src="../static/img/media2.webp"
+          ><img class="lazy" data-src="../static/img/sun2.webp"
         /></a>
         <a href="https://www.youtube.com/watch?v=R8aq1ldy6EU" target="_blank"
-          ><img class="lazy" data-src="../static/img/media3.webp"
+          ><img class="lazy" data-src="../static/img/sun3.webp"
         /></a>
         <a href="https://www.youtube.com/watch?v=G1zIFGb8Jw8" target="_blank"
-          ><img class="lazy" data-src="../static/img/media4.webp"
+          ><img class="lazy" data-src="../static/img/sun4.webp"
         /></a>
         <a href="https://www.youtube.com/watch?v=bUcmjb5v8Xc" target="_blank"
-          ><img class="lazy" data-src="../static/img/media5.webp"
+          ><img class="lazy" data-src="../static/img/sun5.webp"
         /></a>
         <a href="https://www.youtube.com/watch?v=SAaGfV8_sFI" target="_blank"
-          ><img class="lazy" data-src="../static/img/media6.webp"
+          ><img class="lazy" data-src="../static/img/media4.webp"
         /></a>
       </div>
     </section>
@@ -213,7 +149,7 @@
       function lazyload() {
         var lazyloadImages = document.querySelectorAll("img.lazy");
         var scrollTop = window.scrollY;
-        console.log(window.scrollY);
+        // console.log(window.scrollY);
         lazyloadImages.forEach(function (img) {
           // console.log(scrollTop, img.offsetTop);
           if (img.offsetTop < window.innerHeight + scrollTop - 100) {

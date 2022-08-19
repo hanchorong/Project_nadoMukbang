@@ -73,6 +73,9 @@ nav .category li:hover a {
 nav .logo {
   font-family: "Fredoka One", cursive;
 }
+nav .logo:hover a {
+  color: var(--sub-color);
+}
 #login {
   position: absolute;
   padding: 0.85rem;
@@ -112,7 +115,7 @@ nav .logo {
   box-shadow: 0 7px 6px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
 }
-@media (max-width: 832px) {
+@media (max-width: 910px) {
   /* section1 title */
   .titleArea h1 {
     font-size: 2.5rem;
@@ -161,6 +164,12 @@ nav .logo {
   footer .logoArea h1 {
     font-size: 1.5rem !important;
   }
+  #carouselExampleFade .carousel-inner .article {
+    font-size: 0.8rem !important;
+  }
+  .menu_1 section.sec2 .card-body p.info {
+    font-size: 0.8rem;
+  }
 }
 /* section 1 */
 section.sec1 {
@@ -193,11 +202,10 @@ section.sec1 .titleArea h1 {
   min-width: 200px;
   max-width: 430px;
   min-height: auto;
-  /* max-height: auto; */
   font-weight: 900;
   text-align: center;
   line-height: 75px;
-  /* font-size: 2.2rem; */
+  margin: 0 auto;
 }
 section.sec1 .titleArea h1 span {
   font-size: 7rem;
@@ -269,7 +277,7 @@ section.sec1 .titleArea h1 span {
   left: 50%;
   bottom: -4.5rem;
   transform: translateX(-50%);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   color: #fff;

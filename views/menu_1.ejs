@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유튜버별</title>
+    <!-- boot -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/c44f54db1d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/youtuberStyle.css" />
+    <link rel="stylesheet" href="../static/css/menu1.css" />
+    <!-- jq -->
+    <script src="../static/js/jq.js"></script>
+  </head>
+  <body class="menu_1">
+    <%-include("nav.ejs")%>
+    <section class="sec1">
+      <h1></h1>
+      <div class="search">
+        <form class="d-flex" role="search" onsubmit="return false;">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="먹방유튜버 이름"
+            aria-label="Search"
+            id="searchInput"
+          />
+          <button class="btn btn-outline-warning" type="button" id="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="sec2">
+      <div class="cardArea row">
+        <% var creatorInfo = [{name: '햇님', info:'한 종류의 음식만은 많이 먹지 못하는 유튜버', sub: '181', link: "/youtuber1"}, {name: '쯔양', info:'먹방계의 왕중의 왕', sub: '681', link: "/youtuber1"}, {name: '히밥', info:'먹는 속도가 빠른 음식 디펜스 유튜버', sub: '134', link: "/youtuber1"}, {name: '웅이', info:'먹방 남자 유튜버중 탑티어',
+        sub: '106', link: "/youtuber1"}, {name: '여수언니', info:'옆진언니 같지만 근육을 소유한 유튜버',
+        sub: '60', link: "/youtuber1"}, {name: '문복희', info:'얼짱 먹방 유튜버', sub: '814', link: "/youtuber1"}] %>
+        
+        <% for(var i = 0; i<creatorInfo.length; i++ ) {%>
+        <div class="card mb-3 col-6" onclick="location.replace('<%=creatorInfo[i].link%>')">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="../static/img/creator<%=i +1%>.jpeg" class="img-fluid rounded-start" alt="..." />
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h5 class="card-title"><%=creatorInfo[i].name%></h5>
+                <p class="card-text info">
+                  <%=creatorInfo[i].info%>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">구독자 <%=creatorInfo[i].sub%> 만</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </section>
+    <%-include("footer.ejs")%>
+
+    <script>
+    </script>
+  </body>
+</html>

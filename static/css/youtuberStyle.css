@@ -24,26 +24,66 @@
   font-weight: 700;
   color: #fff;
   text-shadow: 2px 3px 8px rgb(235, 94, 6, 0.8);
+  overflow: hidden;
+  white-space: nowrap;
 }
 .youSec2 {
   width: 100%;
-  padding: 3rem 0;
+  padding: 3rem 0 4rem;
 }
-.youtuberPage .title {
+.youtuberPage .youSec3 .title {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  white-space: nowrap;
   text-align: center;
+  font-weight: bold;
+}
+.youtuberPage .youSec2 .title {
+  min-width: 15px;
+  width: 310px;
   font-weight: bold;
   font-size: 2.5rem;
   margin-top: 1rem;
+  white-space: nowrap;
+  position: relative;
+  color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.youSec2 .category {
-  width: 600px;
+.youtuberPage .youSec2 .title::before {
+  content: "뭘 따라 먹어 볼까?";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  overflow: hidden;
+  border-right: 1px solid black;
+  animation: typing 5s steps(31) infinite;
+}
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.youSec2 .foodCategory {
+  max-width: 600px;
   height: 100px;
   margin: 2rem auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
-.youSec2 .category button {
+.youSec2 .foodCategory button {
   position: relative;
   width: 4rem;
   height: 4rem;
@@ -55,12 +95,13 @@
     rgba(238, 206, 1, 0.8) 100%
   );
   box-shadow: 0px 2px 3px var(--sub-green);
+  margin: 1rem;
 }
-.youSec2 .category button i {
+.youSec2 .foodCategory button i {
   font-size: 2rem;
   color: #fff;
 }
-.youSec2 .category button span {
+.youSec2 .foodCategory button span {
   position: absolute;
   bottom: -1.5rem;
   left: 50%;
@@ -69,9 +110,33 @@
   width: 100%;
   text-overflow: inherit;
 }
-.youSec2 .category button:hover span {
+.youSec2 .foodCategory button:hover span {
   color: var(--sub-green);
+  font-weight: bold;
 }
 .youSec3 {
   padding: 2rem 0 5rem;
+}
+/* food category modal */
+.modal-body .modalTitle {
+  margin-bottom: 0.5rem;
+}
+.modal-body .modalTitle a {
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.modal-body .content {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+.modal-body .content img {
+  width: 40%;
+  height: auto;
+}
+.modal-body .content ul {
+  width: 55%;
+  font-size: 0.9rem;
 }

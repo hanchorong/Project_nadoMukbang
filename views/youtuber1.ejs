@@ -47,67 +47,127 @@
     <script src="../static/js/jq.js"></script>
   </head>
   <body class="youtuberPage">
-    <nav class="main">
-      <ul>
-        <li class="logo"><a href="#">nado mukbang</a></li>
-        <ul class="category">
-          <li><a href="#">유튜버별</a></li>
-          <li><a href="#">음식별</a></li>
-          <li><a href="#">프로모션</a></li>
-          <li><a href="#">문의하기</a></li>
-        </ul>
-      </ul>
-
-      <a id="login" href="#">Login</a>
-      <ul class="categoryXs">
-        <li id="navBTN">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="currentColor"
-            class="bi bi-list"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-            />
-          </svg>
-        </li>
-        <ul class="navXsList">
-          <li><a href="#">유튜버별</a></li>
-          <li><a href="#">음식별</a></li>
-          <li><a href="#">프로모션</a></li>
-          <li><a href="#">문의하기</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </ul>
-    </nav>
+    <%-include("nav.ejs")%>
     <section class="youSec1">
       <div class="youtuberImg">
         <div class="name">"입짧은 햇님"</div>
       </div>
     </section>
     <section class="youSec2">
-      <div class="title">뭘 따라 먹어 볼까?</div>
-      <div class="category">
-        <button>
-          <i class="fa-solid fa-ice-cream"></i><span>디저트</span>
-        </button>
-        <button>
-          <i class="fa-solid fa-drumstick-bite"></i><span>치킨</span>
-        </button>
-        <button><i class="fa-solid fa-bowl-food"></i><span>한식</span></button>
-        <button>
-          <i class="fa-solid fa-bell-concierge"></i><span>중식</span>
-        </button>
-        <button><i class="fa-solid fa-fish-fins"></i><span>일식</span></button>
-        <button>
+      <div class="title"><i class="fa-solid fa-utensils"></i> </div>
+      <div class="foodCategory">
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        >
           <i class="fa-solid fa-pizza-slice"></i><span>양식</span>
         </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal">
+          <i class="fa-solid fa-ice-cream"></i><span>디저트</span>
+        </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        >
+          <i class="fa-solid fa-drumstick-bite"></i><span>치킨</span>
+        </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        ><i class="fa-solid fa-bowl-food"></i><span>한식</span></button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        >
+          <i class="fa-solid fa-bell-concierge"></i><span>중식</span>
+        </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        ><i class="fa-solid fa-fish-fins"></i><span>일식</span></button>
       </div>
     </section>
+    <!-- 양식 모달 -->
+    <div
+      class="modal fade"
+      id="pizzaModal"
+      tabindex="-1"
+      aria-labelledby="pizzaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pizzaModalLabel">
+              <i class="fa-solid fa-pizza-slice"></i> 양식
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modalContainer">
+              <div class="modalTitle">
+                <a href="https://www.youtube.com/watch?v=6rl3MIA9iOE" target="_blank">20220608 방송 <i class="fa-solid fa-square-arrow-up-right"></i></a>
+              </div>
+              <div class="content">
+                <img src="./../static/img/foodCategory/20220608.webp" alt="">
+                <ul class="storeInfo">
+                  <li><i class="fa-solid fa-store"></i></i>  '파스타입니다'</li>
+                  <li><i class="fa-solid fa-location-dot"></i> 서울 노원구 상계로5길 12 상가동 (동양마트건물2층)</li>
+                  <li><i class="fa-solid fa-phone-flip"></i> 070-4335-1848</li>
+                  <li><i class="fa-solid fa-circle-info"></i> 노원구 전체 양식 맛집랭킹 1위 파스타입니다</li>
+                </ul>
+              </div>
+              <div class="modalTitle">
+                <a href="https://www.youtube.com/watch?v=6rl3MIA9iOE" target="_blank">20210925 방송 <i class="fa-solid fa-square-arrow-up-right"></i></a>
+              </div>
+              <div class="content">
+                <img src="./../static/img/foodCategory/20210925.webp" alt="">
+                <ul class="storeInfo">
+                  <li><i class="fa-solid fa-store"></i></i>  '울프강 스테이크 하우스'</li>
+                  <li><i class="fa-solid fa-location-dot"></i> 서울 강남구 선릉로152길 21</li>
+                  <li><i class="fa-solid fa-phone-flip"></i> 0507-1486-8700</li>
+                  <li><i class="fa-solid fa-circle-info"></i> 네이버 예약을 통해 방문한 이용자로부터 가장 사랑받은 식당입니다.</li>
+                </ul>
+              </div>
+              <div class="modalTitle">
+                <a href="https://youtu.be/1Y7N17SyaPs" target="_blank">20181023 방송 <i class="fa-solid fa-square-arrow-up-right"></i></a>
+              </div>
+              <div class="content">
+                <img src="./../static/img/foodCategory/20181023.webp" alt="">
+                <ul class="storeInfo">
+                  <li><i class="fa-solid fa-store"></i></i>  ''더플레이스'</li>
+                  <li><i class="fa-solid fa-location-dot"></i> 서울 마포구 월드컵로1길 14 딜라이트 스퀘어 1차 상가 지하2층</li>
+                  <li><i class="fa-solid fa-phone-flip"></i> 02-336-0421</li>
+                  <li><i class="fa-solid fa-circle-info"></i> 프레시 마르게리따 피자 17,500원/ 고르곤졸라 피자 18,900원/ 리코타 샐러드 12,900원</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="youSec3">
       <div class="title">햇님의 최근 먹방</div>
       <hr />
@@ -132,19 +192,8 @@
         /></a>
       </div>
     </section>
-    <footer>
-      <div class="logoArea">
-        <h1><img src="../static/img/sausage.png" />nado mukbang</h1>
-      </div>
-      <div class="rightArea">
-        <ul>
-          <li>대표 : 한초롱</li>
-          <li>이메일 : hancrong@gmail.com</li>
-          <li>주소 : 서울시 동작구 사당동</li>
-          <li>전화 : 010-9270-0553</li>
-        </ul>
-      </div>
-    </footer>
+    <%-include("footer.ejs")%>
+
     <script>
       function lazyload() {
         var lazyloadImages = document.querySelectorAll("img.lazy");

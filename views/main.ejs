@@ -46,43 +46,7 @@
     <script src="../static/js/jq.js"></script>
   </head>
   <body>
-    <nav class="main">
-      <ul>
-        <li class="logo"><a href="#">nado mukbang</a></li>
-        <ul class="category">
-          <li><a href="#">유튜버별</a></li>
-          <li><a href="#">음식별</a></li>
-          <li><a href="#">프로모션</a></li>
-          <li><a href="#">문의하기</a></li>
-        </ul>
-      </ul>
-
-      <a id="login" href="#">Login</a>
-      <ul class="categoryXs">
-        <li id="navBTN">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="currentColor"
-            class="bi bi-list"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-            />
-          </svg>
-        </li>
-        <ul class="navXsList">
-          <li><a href="#">유튜버별</a></li>
-          <li><a href="#">음식별</a></li>
-          <li><a href="#">프로모션</a></li>
-          <li><a href="#">문의하기</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </ul>
-    </nav>
+    <%-include("nav.ejs")%>
     <section class="sec1">
       <div class="titleArea">
         <h1>
@@ -129,7 +93,7 @@
               <div class="article">
                 <span>쯔양</span>
                 <span>먹방계의 왕중의 왕(살이 안찌는 체질..부럽)</span>
-                <span>구독자 181만</span>
+                <span>구독자 681만</span>
               </div>
             </a>
             <a href="/youtuber1"
@@ -196,19 +160,7 @@
         /></a>
       </div>
     </section>
-    <footer>
-      <div class="logoArea">
-        <h1><img src="../static/img/sausage.png" />nado mukbang</h1>
-      </div>
-      <div class="rightArea">
-        <ul>
-          <li>대표 : 한초롱</li>
-          <li>이메일 : hancrong@gmail.com</li>
-          <li>주소 : 서울시 동작구 사당동</li>
-          <li>전화 : 010-9270-0553</li>
-        </ul>
-      </div>
-    </footer>
+    <%-include("footer.ejs")%>
     <script>
       function lazyload() {
         var lazyloadImages = document.querySelectorAll("img.lazy");

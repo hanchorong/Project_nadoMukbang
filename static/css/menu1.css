@@ -1,0 +1,71 @@
+.menu_1 section.sec1 {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: var(--sub-color);
+}
+.menu_1 section h1 {
+  min-width: 11px;
+  width: 360px;
+  height: 2.5rem;
+  font-weight: bold;
+  font-size: 2.2rem;
+  white-space: nowrap;
+  position: relative;
+  color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu_1 section h1::before {
+  content: "유튜버를 검색해 보세요!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  border-right: 1px solid #fff;
+  animation: searchLetter 5s steps(31) infinite;
+}
+@keyframes searchLetter {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.menu_1 section .search {
+  bottom: 2rem;
+}
+.menu_1 section.sec2 {
+  width: 100%;
+}
+.menu_1 section.sec2 .cardArea {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 4rem auto;
+}
+.menu_1 section.sec2 .card {
+  max-width: 440px;
+  max-height: 292px;
+  min-height: 154px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  cursor: pointer;
+}
+.menu_1 section.sec2 .card img {
+  height: 200px;
+  width: 100%;
+}
+.menu_1 section.sec2 .card-body p.info {
+  min-height: 72px;
+  margin-bottom: 0;
+}

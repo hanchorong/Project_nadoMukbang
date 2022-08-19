@@ -32,4 +32,12 @@ $(function () {
       window.location.replace("/youtuber1");
     }
   });
+
+  // menu_1 card link
+  // $("#creatorLink").on("click", function () {
+  //   var test = $(this).attr("data-href");
+  //   window.location.replace(test);
+  //   console.log(test);
+  //   console.log("click");
+  // });
 });

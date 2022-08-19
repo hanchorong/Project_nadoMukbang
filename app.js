@@ -17,3 +17,9 @@ app.listen(port, () => {
 app.get("/youtuber1", (req, res) => {
   res.render("youtuber1");
 });
+app.get("/menu_1", (req, res) => {
+  res.render("menu_1");
+});
+app.get("/login", (req, res) => {
+  res.render("login");
+});

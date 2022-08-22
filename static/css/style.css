@@ -6,9 +6,11 @@
   padding: 0;
 }
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif !important;
   box-sizing: border-box;
   font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 ul {
   list-style: none;
@@ -85,6 +87,9 @@ nav .logo:hover a {
   color: #fff;
   font-family: "Fredoka One", cursive;
 }
+.logo {
+  font-family: "Fredoka One", cursive;
+}
 /* nav xs */
 .categoryXs {
   position: absolute;
@@ -136,6 +141,10 @@ nav .logo:hover a {
   #login {
     display: none;
   }
+  .search {
+    width: 55vw !important;
+    bottom: 8rem !important;
+  }
   .search .d-flex {
     flex-direction: column;
   }
@@ -143,6 +152,9 @@ nav .logo:hover a {
     margin-bottom: 0.75rem;
   }
   /* section1 title */
+  .titleArea {
+    width: 80vw !important;
+  }
   .titleArea h1 {
     font-size: 2rem;
     line-height: 3rem !important;
@@ -157,7 +169,7 @@ nav .logo:hover a {
     flex-direction: column !important;
   }
   .carousel-item a {
-    width: 40vw !important;
+    width: 60vw !important;
     height: 100% !important;
     margin-bottom: 0.3rem;
   }
@@ -169,6 +181,9 @@ nav .logo:hover a {
   }
   .menu_1 section.sec2 .card-body p.info {
     font-size: 0.8rem;
+  }
+  .sec3 .listBox a {
+    height: 30% !important;
   }
 }
 /* section 1 */
@@ -184,7 +199,7 @@ section.sec1 {
   top: 47%;
   left: 50%;
   transform: translate(-50%, -53%);
-  font-family: "Fredoka One", cursive;
+  /* font-family: "Fredoka One", cursive; */
   animation-name: mainLetter;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -199,13 +214,15 @@ section.sec1 {
   }
 }
 section.sec1 .titleArea h1 {
-  min-width: 200px;
+  min-width: 220px;
   max-width: 430px;
   min-height: auto;
   font-weight: 900;
   text-align: center;
   line-height: 75px;
   margin: 0 auto;
+  font-weight: bold;
+  font-family: "Noto Sans KR", sans-serif !important;
 }
 section.sec1 .titleArea h1 span {
   font-size: 7rem;

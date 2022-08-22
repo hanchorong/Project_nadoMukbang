@@ -33,11 +33,23 @@ $(function () {
     }
   });
 
-  // menu_1 card link
-  // $("#creatorLink").on("click", function () {
-  //   var test = $(this).attr("data-href");
-  //   window.location.replace(test);
-  //   console.log(test);
-  //   console.log("click");
-  // });
+  $("#loginSubmit").on("click", function () {
+    var id = $("#userId").val();
+    var password = $("#userPassword").val();
+    if (id == "" && password == "") {
+      $("#userId + span").text("아이디를 입력하세요.");
+      $("#userPassword + span").text("비밀번호를 입력하세요.");
+    } else if (password == "") {
+      $("#userPassword + span").text("비밀번호를 입력하세요.");
+      $("#userId + span").text("");
+    } else if (id == "") {
+      $("#userId + span").text("아이디를 입력하세요.");
+      $("#userPassword + span").text("");
+    } else if (id == "userid" && password == "aaa") {
+      alert("로그인 성공임");
+      // window.location.replace("/");
+    } else if (id !== "userid" || password !== "aaa") {
+      alert("아이디 또는 비밀번호가 틀립니다.");
+    }
+  });
 });

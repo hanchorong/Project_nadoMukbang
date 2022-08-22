@@ -32,7 +32,7 @@ $(function () {
       window.location.replace("/youtuber1");
     }
   });
-
+  // login
   $("#loginSubmit").on("click", function () {
     var id = $("#userId").val();
     var password = $("#userPassword").val();
@@ -50,6 +50,40 @@ $(function () {
       // window.location.replace("/");
     } else if (id !== "userid" || password !== "aaa") {
       alert("아이디 또는 비밀번호가 틀립니다.");
+    }
+  });
+  // menu_2 section3
+  $(".foodCategory button").on("click", function () {
+    console.log($(this).attr("id"));
+    var title = $(this).attr("id");
+    if (title == "chicken") {
+      $(".ViewArea .chicken").css("display", "flex");
+      title = "치킨";
+      $(".cateTitle").text(title);
+      $(".kor").css("display", "none");
+      $(".wes").css("display", "none");
+      $(".des").css("display", "none");
+    } else if (title == "kor") {
+      $(".ViewArea .kor").css("display", "flex");
+      title = "한식";
+      $(".cateTitle").text(title);
+      $(".chicken").css("display", "none");
+      $(".wes").css("display", "none");
+      $(".des").css("display", "none");
+    } else if (title == "western") {
+      $(".ViewArea .wes").css("display", "flex");
+      title = "양식";
+      $(".cateTitle").text(title);
+      $(".chicken").css("display", "none");
+      $(".kor").css("display", "none");
+      $(".des").css("display", "none");
+    } else if (title == "desert") {
+      $(".ViewArea .des").css("display", "flex");
+      title = "디저트";
+      $(".cateTitle").text(title);
+      $(".chicken").css("display", "none");
+      $(".kor").css("display", "none");
+      $(".wes").css("display", "none");
     }
   });
 });

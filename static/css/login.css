@@ -12,7 +12,7 @@
   transform: translate(-50%, -50%);
   width: 400px;
   height: 80vh;
-  background-color: #fcba03ef;
+  background-color: var(--main-color);
   border-radius: 1rem;
 }
 .login .logo {

@@ -5,6 +5,182 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>메뉴별</title>
+    <!-- boot -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/c44f54db1d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/youtuberStyle.css" />
+    <link rel="stylesheet" href="../static/css/menu1.css" />
+    <link rel="stylesheet" href="../static/css/menu2.css" />
+    <!-- jq -->
+    <script src="../static/js/jq.js"></script>
   </head>
-  <body></body>
+  <body class="menu_2">
+    <%-include("nav.ejs")%>
+    <section class="sec1">
+      <div class="title"><i class="fa-solid fa-utensils"></i></div>
+    </section>
+    <section class="sec2">
+      <div class="foodCategory">
+        <button type="button" id="western">
+          <i class="fa-solid fa-pizza-slice"></i><span>양식</span>
+        </button>
+        <button type="button" id="desert">
+          <i class="fa-solid fa-ice-cream"></i><span>디저트</span>
+        </button>
+        <button type="button" id="chicken">
+          <i class="fa-solid fa-drumstick-bite"></i><span>치킨</span>
+        </button>
+        <button type="button" id="kor">
+          <i class="fa-solid fa-bowl-food"></i><span>한식</span>
+        </button>
+        <button type="button" id="chi">
+          <i class="fa-solid fa-bell-concierge"></i><span>중식</span>
+        </button>
+        <button type="button" id="jap">
+          <i class="fa-solid fa-fish-fins"></i><span>일식</span>
+        </button>
+      </div>
+    </section>
+    <section class="sec3">
+      <div class="cateTitle"></div>
+      <hr />
+      <div class="ViewArea" >
+        <div class="chicken row" style="display: none;">
+          <%var chickenA = [
+          { name: "문복희", store: "옛날통닭다리", menu: "대왕닭껍질튀김" },{ name: "HONG SOUND", store: "홈플러스", menu: "당당치킨" },{name: "희밥", store: "교촌, bbq 외 3", menu:"반반콤보, 황금올리브 외 3"},{name: "가르마", store: "훌랄라치킨", menu:"참숯핫바베큐매운맛"}];%>
+          <% for( var i = 0; i<chickenA.length; i++ ) { %>
+          <div class="card col col-md-6 col-12" style="width: 18rem">
+            <img
+              src="../static/img/foodCategory/chicken<%=i +1%>.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <%=chickenA[i].name%>
+              </p>
+              <p class="card-text">
+                <%=chickenA[i].store%>
+              </p>
+              <p class="card-text">
+                <%=chickenA[i].menu%>
+              </p>
+            </div>
+          </div>
+          <% } %>
+        </div>
+        <div class="kor row"  style="display: none;">
+          <%var korA = [
+          { name: "히밥", store: "해와달", menu: "한정식" },{ name: "웅이", store: "두레한식뷔페", menu: "뷔페1인" },{name: "먹갱", store: "황금곱창", menu:"소곱창, 소대창"},{name: "햇님", store: "평화연남", menu:"낙곱새"},{name: "임슐랭", store: "오문창순대국밥", menu:"순대국밥"}];%>
+          <% for( var i = 0; i<korA.length; i++ ) { %>
+          <div class="card col col-md-6 col-12" style="width: 18rem">
+            <img
+              src="../static/img/foodCategory/kor<%=i +1%>.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <%=korA[i].name%>
+              </p>
+              <p class="card-text">
+                <%=korA[i].store%>
+              </p>
+              <p class="card-text">
+                <%=korA[i].menu%>
+              </p>
+            </div>
+          </div>
+          <% } %>
+        </div>
+        <div class="wes row"  style="display: none;">
+          <%var wesA = [
+          { name: "상해기", store: "마잇다키친", menu: "무한리필코스A" },{ name: "문복희", store: "아웃백", menu: "스테이크, 코코넛쉬림프 등" }];%>
+          <% for( var i = 0; i<wesA.length; i++ ) { %>
+          <div class="card col col-md-6 col-12" style="width: 18rem">
+            <img
+              src="../static/img/foodCategory/wes<%=i +1%>.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <%=wesA[i].name%>
+              </p>
+              <p class="card-text">
+                <%=wesA[i].store%>
+              </p>
+              <p class="card-text">
+                <%=wesA[i].menu%>
+              </p>
+            </div>
+          </div>
+          <% } %>
+        </div>
+        <div class="des row"  style="display: none;">
+          <%var desA = [
+          { name: "시내", store: "편의점디저트", menu: "초콜릿우유아이스크림, 케이크 등" }];%>
+          <% for( var i = 0; i<desA.length; i++ ) { %>
+          <div class="card col col-md-6 col-12" style="width: 18rem">
+            <img
+              src="../static/img/foodCategory/des<%=i +1%>.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                <%=desA[i].name%>
+              </p>
+              <p class="card-text">
+                <%=desA[i].store%>
+              </p>
+              <p class="card-text">
+                <%=desA[i].menu%>
+              </p>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </section>
+    <%-include("footer.ejs")%>
+    <script>
+      var chickenA = [
+        { name: "문복희", store: "옛날통닭다리", menu: "대왕닭껍질튀김" },{ name: "HONG SOUND", store: "홈플러스", menu: "당당치킨" },{name: "희밥", store: "교촌, bbq 외 3", menu:"반반콤보, 황금올리브 외 3"},];
+    </script>
+  </body>
 </html>

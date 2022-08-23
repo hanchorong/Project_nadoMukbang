@@ -74,7 +74,7 @@
         sub: '60', link: "/youtuber1"}, {name: '문복희', info:'얼짱 먹방 유튜버', sub: '814', link: "/youtuber1"}] %>
         
         <% for(var i = 0; i<creatorInfo.length; i++ ) {%>
-        <div class="card mb-3 col-6" onclick="location.replace('<%=creatorInfo[i].link%>')">
+        <div class="card mb-3 col-sm-12 col-lg-4" onclick="location.replace('<%=creatorInfo[i].link%>')">
           <div class="row g-0">
             <div class="col-md-5">
               <img src="../static/img/creator<%=i +1%>.jpeg" class="img-fluid rounded-start" alt="..." />

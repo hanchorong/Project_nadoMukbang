@@ -45,7 +45,7 @@
     <!-- jq -->
     <script src="../static/js/jq.js"></script>
   </head>
-  <body>
+  <body class="main">
     <%-include("nav.ejs")%>
     <section class="sec1">
       <div class="titleArea">
@@ -65,7 +65,7 @@
             aria-label="Search"
             id="searchInput"
           />
-          <button class="btn btn-outline-success" type="button" id="submit">
+          <button class="btn btn-outline-danger" type="button" id="submit">
             Search
           </button>
         </form>
@@ -140,24 +140,28 @@
       <h1 class="title">최근 먹방</h1>
       <hr />
       <div class="listBox">
-        <a href="https://www.youtube.com/watch?v=KLWJCRMr-kg" target="_blank"
-          ><img class="lazy" data-src="../static/img/media1.webp"
-        /></a>
-        <a href="https://www.youtube.com/watch?v=Lm9JRlYxFG4" target="_blank"
-          ><img class="lazy" data-src="../static/img/media2.webp"
-        /></a>
-        <a href="https://www.youtube.com/watch?v=R8aq1ldy6EU" target="_blank"
-          ><img class="lazy" data-src="../static/img/media3.webp"
-        /></a>
-        <a href="https://www.youtube.com/watch?v=G1zIFGb8Jw8" target="_blank"
-          ><img class="lazy" data-src="../static/img/media4.webp"
-        /></a>
-        <a href="https://www.youtube.com/watch?v=bUcmjb5v8Xc" target="_blank"
-          ><img class="lazy" data-src="../static/img/media5.webp"
-        /></a>
-        <a href="https://www.youtube.com/watch?v=SAaGfV8_sFI" target="_blank"
-          ><img class="lazy" data-src="../static/img/media6.webp"
-        /></a>
+        <div class="d-flex">
+          <a href="https://www.youtube.com/watch?v=KLWJCRMr-kg" target="_blank"
+            ><img class="lazy" data-src="../static/img/media1.webp"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=Lm9JRlYxFG4" target="_blank"
+            ><img class="lazy" data-src="../static/img/media2.webp"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=R8aq1ldy6EU" target="_blank"
+            ><img class="lazy" data-src="../static/img/media3.webp"
+          /></a>
+        </div>
+        <div class="d-flex">
+          <a href="https://www.youtube.com/watch?v=G1zIFGb8Jw8" target="_blank"
+            ><img class="lazy" data-src="../static/img/media4.webp"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=bUcmjb5v8Xc" target="_blank"
+            ><img class="lazy" data-src="../static/img/media5.webp"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=SAaGfV8_sFI" target="_blank"
+            ><img class="lazy" data-src="../static/img/media6.webp"
+          /></a>
+        </div>
       </div>
     </section>
     <%-include("footer.ejs")%>

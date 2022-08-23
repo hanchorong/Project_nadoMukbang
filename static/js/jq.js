@@ -86,4 +86,7 @@ $(function () {
       $(".wes").css("display", "none");
     }
   });
+
+  // promotion
+  // console.log(window.scrollY());
 });

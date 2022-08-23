@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+.textArea div {
+  font-size: 2rem;
+}
+.textArea > div:first-child {
+  font-size: 3rem;
+  font-family: "Fredoka One", cursive;
+  font-style: normal;
+}
+.promotion section {
+  width: 100%;
+  height: 100vh;
+  font-family: "Nanum Pen Script", cursive;
+}
+.promotion1 {
+  background-color: var(--main-color);
+}
+.promotion1 .png {
+  background: url("../img/2979686.webp") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+}
+.middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.promotion1 .middle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  min-width: 300px;
+}
+.promotion1 .middle::before {
+  content: "";
+  background-color: #fff;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 40vh;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.2) 40%,
+    rgba(255, 255, 255, 0.1) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 100%;
+  z-index: -1;
+}
+.promotion1 .middle > div:nth-child(1) {
+  font-size: 3rem;
+  font-weight: 700;
+  animation: scale 3s steps(31) infinite;
+  margin-bottom: 1rem;
+}
+.promotion1 .middle > div:nth-child(3) {
+  font-family: "Fredoka One", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgb(235, 94, 6, 0.8);
+  margin-bottom: 1rem;
+}
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+.promotion2 {
+  position: relative;
+}
+.promotion2 .png {
+  background: url("../img/point.webp") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.ani_opacity {
+  animation: opacity 3s steps(31) 1;
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.promotion2 .textArea {
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.promotion2 .textArea div {
+  margin-bottom: 1rem;
+}
+.promotion3 {
+  position: relative;
+}
+.promotion3 .textArea {
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.promotion3 .textArea > div:first-child {
+  font-size: 2rem;
+}
+.promotion3 .tel {
+  position: absolute;
+  top: 1rem;
+  left: -9rem;
+}
+.promotion3 .tel i {
+  font-size: 7.5rem;
+  color: var(--sub-color);
+}
+.ani_position {
+  animation: position 3s steps(31) 1;
+}
+@keyframes position {
+  from {
+    opacity: 0;
+    left: -100%;
+  }
+  to {
+    opacity: 1;
+    left: -9rem;
+  }
+}
+.promotion4 {
+  position: relative;
+}
+.promotion4 .png {
+  background: url(../img/sns.webp) no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  bottom: 5rem;
+}
+.ani_sns {
+  animation: sns 2s steps(20) 1;
+}
+@keyframes sns {
+  from {
+    opacity: 0;
+    bottom: -100%;
+    right: -100%;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+    bottom: 5rem;
+  }
+}
+.promotion4 .textArea {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+  min-width: 250px;
+}

@@ -12,13 +12,16 @@
   width: 450px;
   height: 450px;
   border-radius: 100%;
-  margin: 0 auto;
   box-shadow: inset -2px -3px 8px rgb(235, 94, 6, 0.8);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .youSec1 .youtuberImg .name {
   position: absolute;
   left: 50%;
-  bottom: 1rem;
+  bottom: -1rem;
   transform: translateX(-50%);
   font-size: 3rem;
   font-weight: 700;
@@ -115,6 +118,7 @@
   font-weight: bold;
 }
 .youSec3 {
+  width: 100%;
   padding: 2rem 0 5rem;
 }
 /* food category modal */

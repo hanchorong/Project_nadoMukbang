@@ -80,7 +80,7 @@ nav .logo:hover a {
 }
 #login {
   position: absolute;
-  padding: 0.85rem;
+  padding: 0.7rem 0.85rem;
   background-color: var(--main-color);
   border-radius: 10px;
   right: 2rem;
@@ -128,6 +128,10 @@ nav .logo:hover a {
   }
   .titleArea h1 span {
     font-size: 3.5rem !important;
+  }
+  /* menu_1 card */
+  .menu_1 section.sec2 .cardArea {
+    max-width: 800px;
   }
 }
 @media (max-width: 576px) {
@@ -180,10 +184,18 @@ nav .logo:hover a {
     font-size: 0.8rem !important;
   }
   .menu_1 section.sec2 .card-body p.info {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
-  .sec3 .listBox a {
-    height: 30% !important;
+  .main .sec3 {
+    /* height: 270vh; */
+  }
+  .listBox .d-flex {
+    min-width: 80vw;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .listBox .d-flex a {
+    width: 80vw;
   }
 }
 /* section 1 */
@@ -236,7 +248,15 @@ section.sec1 .titleArea h1 span {
   transform: translateX(-50%);
   width: 45vw;
 }
-
+.search button {
+  font-family: "Fredoka One", cursive;
+  background-color: var(--sub-color);
+  color: #fff;
+}
+.search button:hover {
+  background-color: transparent;
+  color: var(--sub-color);
+}
 /* section 2 */
 .sec2 {
   position: relative;
@@ -312,7 +332,6 @@ section.sec1 .titleArea h1 span {
 /* section3 */
 .sec3 {
   width: 100%;
-  height: 100vh;
 }
 .sec3 .title {
   font-weight: 700;
@@ -320,26 +339,30 @@ section.sec1 .titleArea h1 span {
 }
 hr {
   opacity: 1;
-  margin: 1rem;
-  margin-bottom: 3rem;
+  margin: 1rem 2rem 4rem 2rem;
+  margin-bottom: 4rem;
   border-top: 2px solid;
 }
 .listBox {
-  width: 90vw;
-  height: 70vh;
-  margin: 0 auto;
+  max-width: 1100px;
+  height: fit-content;
+  margin: 0 auto 5rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
+}
+.listBox div.d-flex {
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
 }
 .listBox a {
-  width: 30%;
-  height: 40%;
+  width: 32%;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.504);
   position: relative;
+  margin-bottom: 2rem;
 }
 .listBox a::before {
   content: "";
@@ -347,7 +370,7 @@ hr {
   background: url("../img/youtube.png") no-repeat;
   background-size: contain;
   width: 30px;
-  height: inherit;
+  height: -webkit-fill-available;
   right: 1rem;
   top: 1rem;
   color: red;

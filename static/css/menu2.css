@@ -93,15 +93,39 @@
 }
 .menu_2 .sec3 .row .card {
   margin-bottom: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+.menu_2 .sec3 .row .card img {
+  --bs-card-spacer-y: 0;
+  --bs-card-spacer-x: 0;
 }
 .menu_2 .sec3 .card-body p:first-child {
   font-size: 1.5rem;
   font-weight: 700;
+  cursor: pointer;
 }
-.menu_2 .sec3 .card-body p:nth-child(1)::after {
+.menu_2 .sec3 .card-body p:nth-child(2)::before {
   content: "";
   background: url("../img/store-solid.svg") no-repeat;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
   display: inline-block;
+  vertical-align: middle;
+}
+.menu_2 .sec3 .card-body p:nth-child(3)::before {
+  content: "";
+  background: url("../img/clipboard-list-solid.svg") no-repeat;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu_2 .sec3 .card-body p:nth-child(4)::before {
+  content: "";
+  background: url("../img/phone-solid.svg") no-repeat;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
 }

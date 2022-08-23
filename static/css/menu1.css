@@ -44,6 +44,9 @@
 .menu_1 section .search {
   bottom: 2rem !important;
 }
+.menu_1 section .search button {
+  background-color: var(--main-color);
+}
 .menu_1 section.sec2 {
   width: 100%;
   height: auto;
@@ -56,15 +59,16 @@
   text-align: center;
 }
 .menu_1 section.sec2 .cardArea {
-  max-width: 900px;
+  max-width: 950px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 2rem auto;
+  padding: 0 1rem;
 }
 .menu_1 section.sec2 .card {
-  max-width: 440px;
-  max-height: 292px;
+  max-width: 300px;
+  /* max-height: 292px; */
   min-height: 154px;
   padding-left: 0 !important;
   padding-right: 0 !important;

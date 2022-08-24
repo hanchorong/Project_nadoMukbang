@@ -32,6 +32,7 @@ $(function () {
       window.location.replace("/youtuber1");
     }
   });
+
   // login
   $("#loginSubmit").on("click", function () {
     var id = $("#userId").val();
@@ -47,7 +48,6 @@ $(function () {
       $("#userPassword + span").text("");
     } else if (id == "userid" && password == "aaa") {
       alert("로그인 성공임");
-      // window.location.replace("/");
     } else if (id !== "userid" || password !== "aaa") {
       alert("아이디 또는 비밀번호가 틀립니다.");
     }
@@ -87,6 +87,18 @@ $(function () {
     }
   });
 
-  // promotion
-  // console.log(window.scrollY());
+  // scroll lazy_image
+  $(window).scroll(function () {
+    var scrollT = window.scrollY;
+    var lazyImage = $("img.lazy");
+    $(lazyImage).each(function (img) {
+      var dataSrc = $(this).attr("data-src");
+      // console.log(dataSrc);
+      if ($(this).offset().top < window.innerHeight + scrollT) {
+        $(this).attr("src", dataSrc);
+        $(this).removeClass("lazy");
+        $(window).resize;
+      }
+    });
+  });
 });

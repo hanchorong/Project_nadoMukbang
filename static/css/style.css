@@ -133,6 +133,9 @@ nav .logo:hover a {
   .menu_1 section.sec2 .cardArea {
     max-width: 800px;
   }
+  #carouselExampleFade .carousel-inner .article > span:nth-child(2) {
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 576px) {
   /* nav */

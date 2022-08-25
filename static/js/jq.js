@@ -54,36 +54,28 @@ $(function () {
   });
   // menu_2 section3
   $(".foodCategory button").on("click", function () {
-    console.log($(this).attr("id"));
+    // console.log($(this).attr("id"));
     var title = $(this).attr("id");
     if (title == "chicken") {
       $(".ViewArea .chicken").css("display", "flex");
       title = "치킨";
       $(".cateTitle").text(title);
-      $(".kor").css("display", "none");
-      $(".wes").css("display", "none");
-      $(".des").css("display", "none");
+      $("div.chicken").siblings().css("display", "none");
     } else if (title == "kor") {
       $(".ViewArea .kor").css("display", "flex");
       title = "한식";
       $(".cateTitle").text(title);
-      $(".chicken").css("display", "none");
-      $(".wes").css("display", "none");
-      $(".des").css("display", "none");
+      $("div.kor").siblings().css("display", "none");
     } else if (title == "western") {
       $(".ViewArea .wes").css("display", "flex");
       title = "양식";
       $(".cateTitle").text(title);
-      $(".chicken").css("display", "none");
-      $(".kor").css("display", "none");
-      $(".des").css("display", "none");
+      $("div.wes").siblings().css("display", "none");
     } else if (title == "desert") {
       $(".ViewArea .des").css("display", "flex");
       title = "디저트";
       $(".cateTitle").text(title);
-      $(".chicken").css("display", "none");
-      $(".kor").css("display", "none");
-      $(".wes").css("display", "none");
+      $("div.des").siblings().css("display", "none");
     }
   });
 
@@ -100,5 +92,93 @@ $(function () {
         $(window).resize;
       }
     });
+  });
+
+  // contact input val to modal
+  // $("#inputState").on("click", function () {
+  //   var selectOp = $("#op").val();
+  //   var name = $("#contactName").val();
+  //   var tel = $("#contactTel").val();
+  //   var mail = $("#contactMail").val();
+  //   var text = $("#contactText").val();
+
+  //   // $(".op").text(selectOp);
+  //   // $(".contactName").text(name);
+  //   $(".contactTel").text(tel);
+  //   $(".contactMail").text(mail);
+  //   $(".contactText").text(text);
+
+  //   console.log(text);
+  //   if (selectOp == null ||
+  //       name == "" ||
+  //       tel == "" ||
+  //       mail == "" ||
+  //       text == "") {
+  //     $('table td').text('모든내용을 입력하세요')
+  //   }
+
+  // });
+  $("#inputState").on("click", function () {
+    var selectOp = $("#op").val();
+    var name = $("#contactName").val();
+    var tel = $("#contactTel").val();
+    var mail = $("#contactMail").val();
+    var text = $("#contactText").val();
+
+    if (
+      selectOp == null ||
+      name == "" ||
+      tel == "" ||
+      mail == "" ||
+      text == ""
+    ) {
+      $(".alert1").css({
+        display: "block",
+        color: "red",
+      });
+      $(".sandStyle").attr("disabled", "true");
+      $("#sendModalOpen .modal-body table").addClass("modalBodyNone");
+
+      console.log("input 하나라도 안채운상태");
+      // var test = $(".sandStyle").attr("disabled");
+      // console.log(test);
+      // if (test == true) {
+      // }
+    } else {
+      $("#sendModalOpen .modal-body table").addClass("modalBodyBlock");
+
+      $(".alert1").css({
+        display: "none",
+      });
+
+      // $(".op").text(selectOp);
+      if (selectOp == "advertising") {
+        selectOp = "광고";
+        $(".op").text(selectOp);
+      } else if (selectOp == "launching") {
+        selectOp = "입점";
+        $(".op").text(selectOp);
+      } else if (selectOp == "site") {
+        selectOp = "사이트 오류";
+        $(".op").text(selectOp);
+      } else if (selectOp == "suggest") {
+        selectOp = "건의";
+        $(".op").text(selectOp);
+      }
+
+      $(".contactName").text(name);
+      $(".contactTel").text(tel);
+      $(".contactMail").text(mail);
+      $(".contactText textarea").text(text);
+      console.log("input 다 채운상태");
+
+      var test = $(".sandStyle").attr("disabled");
+      if (test == "disabled") {
+        $(".sandStyle").attr("disabled", false);
+      }
+      $(".sandStyle").on("click", function () {
+        alert("문의보내기 성공");
+      });
+    }
   });
 });

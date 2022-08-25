@@ -1,0 +1,105 @@
+.contact input {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+}
+.contact .view {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--sub-color);
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+}
+.contact section.logoArea {
+  width: 45vw;
+  height: fit-content;
+  text-align: center;
+}
+.contact section.logoArea > div:first-child {
+  font-family: "Fredoka One", cursive;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 42px;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+.contact section.logoArea ul li {
+  color: #fff;
+}
+.contact section.inputArea {
+  width: 50vw;
+  height: 80vh;
+  border: 1px solid var(--main-color);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+}
+.contact .inputForm {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact section.inputArea input {
+  height: 40px;
+  text-indent: 1rem;
+  color: #fff;
+}
+/* .contact section.inputArea input {
+
+} */
+.contact section.inputArea input::placeholder {
+  color: var(--main-color);
+}
+.contact select {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  height: 40px;
+  text-indent: 1.5rem;
+  color: var(--main-color);
+}
+.contact textarea {
+  border-radius: 5px;
+  height: 6rem;
+  padding: 0.5rem;
+  border: 1px solid var(--main-color);
+}
+.contact button.contactSubmit {
+  width: 100%;
+  height: 45px;
+  background-color: var(--main-color);
+  border-radius: 21px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Fredoka One", cursive;
+  box-shadow: 0px 3px 8px rgba(145, 129, 3, 0.753);
+  font-size: 1.2rem;
+}
+.contact .modal-footer button {
+  font-family: "Fredoka One", cursive;
+}
+.contact .sandStyle {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  border: 0;
+}
+button:disabled {
+  background-color: #ddd !important;
+}
+.modalBodyNone {
+  display: none;
+}
+.modalBodyBlock {
+  display: block;
+}

@@ -29,3 +29,6 @@ app.get("/menu_2", (req, res) => {
 app.get("/promotion", (req, res) => {
   res.render("promotion");
 });
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});

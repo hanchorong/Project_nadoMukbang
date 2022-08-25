@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문의하기</title>
+    <!-- boot -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/c44f54db1d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/youtuberStyle.css" />
+    <link rel="stylesheet" href="../static/css/menu1.css" />
+    <link rel="stylesheet" href="../static/css/contact.css" />
+    <!-- jq -->
+    <script src="../static/js/jq.js"></script>
+  </head>
+  <body class="contact">
+    <%-include("nav.ejs")%>
+    <div class="view">
+      <section class="logoArea">
+        <div>
+          <div>nado</div>
+          <div>mukbang</div>
+        </div>
+        <ul>
+          <li>hancrong@gmail.com</li>
+          <li>https://github.com/hanchorong</li>
+          <li>01092700553</li>
+        </ul>
+      </section>
+      <section class="inputArea">
+        <div class="title">문의하기</div>
+        <div class="inputForm">
+          <select name="select" id="op">
+            <option value="" disabled selected>문의종류</option>
+            <option value="advertising">광고</option>
+            <option value="launching">입점</option>
+            <option value="site">오류</option>
+            <option value="suggest">건의</option>
+          </select>
+          <input type="text" placeholder="이름" id="contactName" />
+          <input type="text" placeholder="연락처" id="contactTel" />
+          <input type="email" placeholder="이메일" id="contactMail" />
+          <textarea
+            type="text"
+            placeholder="내용을 입력하세요."
+            id="contactText"
+          ></textarea>
+          <button
+            id="inputState"
+            class="contactSubmit"
+            data-bs-toggle="modal"
+            data-bs-target="#sendModalOpen"
+          >
+            Sand
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="sendModalOpen"
+      tabindex="-1"
+      aria-labelledby="sendModalOpenLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sendModalOpenLabel">
+              <i class="fa-solid fa-clipboard-check"></i> 문의내용확인
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert1">
+              <i class="fa-solid fa-circle-exclamation"></i> 모든 내용을
+              입력하세요
+            </div>
+            <table style="margin: 0 auto; width: 90%; height: auto">
+              <tbody style="display: flex; flex-direction: column">
+                <tr style="padding: 1rem">
+                  <th style="text-align: right; width: 30vw">문의종류</th>
+                  <td class="op" style="width: 60vw; padding-left: 1rem"></td>
+                </tr>
+                <tr style="padding: 1rem">
+                  <th style="text-align: right; width: 30vw">이름</th>
+                  <td
+                    class="contactName"
+                    style="width: 60vw; padding-left: 1rem"
+                  ></td>
+                </tr>
+                <tr style="padding: 1rem">
+                  <th style="text-align: right; width: 30vw">연락처</th>
+                  <td
+                    class="contactTel"
+                    style="width: 60vw; padding-left: 1rem"
+                  ></td>
+                </tr>
+                <tr style="padding: 1rem">
+                  <th style="text-align: right; width: 30vw">이메일</th>
+                  <td
+                    class="contactMail"
+                    style="width: 60vw; padding-left: 1rem"
+                  ></td>
+                </tr>
+                <tr style="padding: 1rem">
+                  <th style="text-align: right; width: 30vw">문의내용</th>
+                  <td
+                    class="contactText"
+                    style="width: 60vw; padding-left: 1rem; text-align: right"
+                  >
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="10"
+                      readonly
+                    ></textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary sandStyle">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

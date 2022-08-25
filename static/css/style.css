@@ -189,9 +189,6 @@ nav .logo:hover a {
   .menu_1 section.sec2 .card-body p.info {
     font-size: 1rem;
   }
-  .main .sec3 {
-    /* height: 270vh; */
-  }
   .listBox .d-flex {
     min-width: 80vw;
     flex-direction: column !important;
@@ -211,6 +208,28 @@ nav .logo:hover a {
     top: -55% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
+  }
+  /* contact */
+  .contact .view {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .contact .view .logoArea {
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .contact .view .logoArea div {
+    font-size: 1.8rem;
+    line-height: 1.6rem;
+  }
+  .contact .view .logoArea ul {
+    font-size: 0.7rem;
+    text-align: left;
+  }
+  .contact .view .inputArea {
+    width: 90vw;
+    height: 68vh;
   }
 }
 /* section 1 */

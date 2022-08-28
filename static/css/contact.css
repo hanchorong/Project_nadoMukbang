@@ -54,9 +54,6 @@
   text-indent: 1rem;
   color: #fff;
 }
-/* .contact section.inputArea input {
-
-} */
 .contact section.inputArea input::placeholder {
   color: var(--main-color);
 }

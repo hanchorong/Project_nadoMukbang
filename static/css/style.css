@@ -231,6 +231,14 @@ nav .logo:hover a {
     width: 90vw;
     height: 68vh;
   }
+  .contact .modal-body textarea {
+    max-width: 300px;
+  }
+  /* creator page */
+  .youSec1 .youtuberImg {
+    width: 375px !important;
+    height: 375px !important;
+  }
 }
 /* section 1 */
 section.sec1 {
@@ -450,4 +458,19 @@ footer ul {
 footer ul li {
   color: #fff;
   font-size: 0.8rem;
+}
+.main .cateTitle {
+  font-size: 2rem;
+  width: 100%;
+  height: 2.5rem;
+}
+.main .menu_2 .whatSec3 {
+  position: relative;
+}
+.main .menu_2 .detail {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1rem;
+  color: var(--sub-green);
 }

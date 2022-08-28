@@ -94,30 +94,7 @@ $(function () {
     });
   });
 
-  // contact input val to modal
-  // $("#inputState").on("click", function () {
-  //   var selectOp = $("#op").val();
-  //   var name = $("#contactName").val();
-  //   var tel = $("#contactTel").val();
-  //   var mail = $("#contactMail").val();
-  //   var text = $("#contactText").val();
-
-  //   // $(".op").text(selectOp);
-  //   // $(".contactName").text(name);
-  //   $(".contactTel").text(tel);
-  //   $(".contactMail").text(mail);
-  //   $(".contactText").text(text);
-
-  //   console.log(text);
-  //   if (selectOp == null ||
-  //       name == "" ||
-  //       tel == "" ||
-  //       mail == "" ||
-  //       text == "") {
-  //     $('table td').text('모든내용을 입력하세요')
-  //   }
-
-  // });
+  // contact page
   $("#inputState").on("click", function () {
     var selectOp = $("#op").val();
     var name = $("#contactName").val();
@@ -138,12 +115,6 @@ $(function () {
       });
       $(".sandStyle").attr("disabled", "true");
       $("#sendModalOpen .modal-body table").addClass("modalBodyNone");
-
-      console.log("input 하나라도 안채운상태");
-      // var test = $(".sandStyle").attr("disabled");
-      // console.log(test);
-      // if (test == true) {
-      // }
     } else {
       $("#sendModalOpen .modal-body table").addClass("modalBodyBlock");
 
@@ -151,7 +122,6 @@ $(function () {
         display: "none",
       });
 
-      // $(".op").text(selectOp);
       if (selectOp == "advertising") {
         selectOp = "광고";
         $(".op").text(selectOp);
@@ -170,7 +140,6 @@ $(function () {
       $(".contactTel").text(tel);
       $(".contactMail").text(mail);
       $(".contactText textarea").text(text);
-      console.log("input 다 채운상태");
 
       var test = $(".sandStyle").attr("disabled");
       if (test == "disabled") {

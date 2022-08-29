@@ -197,18 +197,18 @@ nav .logo:hover a {
   .listBox .d-flex a {
     width: 80vw;
   }
-  .promotion3 .textArea {
+  /* .promotion3 .textArea {
     top: 50% !important;
     right: 0 !important;
     transform: translateY(-50%) !important;
     width: 75vw;
-  }
-  .promotion3 .tel {
+  } */
+  /* .promotion3 .tel {
     position: absolute;
     top: -55% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-  }
+  } */
   /* contact */
   .contact .view {
     flex-direction: column;

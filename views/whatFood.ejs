@@ -28,14 +28,17 @@
     <div class="ViewArea" >
       <div class="chicken row" style="display: none;">
         <%var chickenA = [
-        { name: "문복희", store: "옛날통닭다리", menu: "대왕닭껍질튀김", tel: "02-123-2345" },{ name: "HONG SOUND", store: "홈플러스", menu: "당당치킨", tel: "02-123-2345" },{name: "희밥", store: "교촌, bbq 외 3", menu:"반반콤보, 황금올리브 외 3", tel: "02-123-2345"},{name: "가르마", store: "훌랄라치킨", menu:"참숯핫바베큐매운맛", tel: "02-123-2345"}];%>
+        { name: "문복희", store: "옛날통닭다리", menu: "대왕닭껍질튀김", tel: "02-123-2345", toLink: "https://youtu.be/P1uDXt3SzuU" },{ name: "HONG SOUND", store: "홈플러스", menu: "당당치킨", tel: "02-123-2345", toLink: "https://youtu.be/Z-VPLYGPFag" },{name: "희밥", store: "교촌, bbq 외 3", menu:"반반콤보, 황금올리브 외 3", tel: "02-123-2345", toLink: "https://youtu.be/8euEeTg9KaU"},{name: "가르마", store: "훌랄라치킨", menu:"참숯핫바베큐매운맛", tel: "02-123-2345", toLink: "https://youtu.be/ufA3zq3DoIE"}];%>
         <% for( var i = 0; i<chickenA.length; i++ ) { %>
-        <div class="card col col-md-6 col-12" style="width: 18rem">
-          <img
-            src="../static/img/foodCategory/chicken<%=i +1%>.webp"
-            class="card-img-top"
-            alt="..."
-          />
+        <div class="card col col-md-6 col-12 basketItem" style="width: 18rem">
+          <button id="basketAdd" onclick="bookmark()"><i class="fa-solid fa-bookmark"></i></button>
+          <a href="<%=chickenA[i].toLink%>" target="_blank">
+            <img
+              src="../static/img/foodCategory/chicken<%=i +1%>.webp"
+              class="card-img-top"
+              alt="..."
+            />
+          </a>
           <div class="card-body">
             <p class="card-text">
               <%=chickenA[i].name%>
@@ -57,7 +60,7 @@
         <%var korA = [
         { name: "히밥", store: "해와달", menu: "한정식", tel: "02-123-2345" },{ name: "웅이", store: "두레한식뷔페", menu: "뷔페1인", tel: "02-123-2345" },{name: "먹갱", store: "황금곱창", menu:"소곱창, 소대창", tel: "02-123-2345"},{name: "햇님", store: "평화연남", menu:"낙곱새", tel: "02-123-2345"},{name: "임슐랭", store: "오문창순대국밥", menu:"순대국밥", tel: "02-123-2345"}];%>
         <% for( var i = 0; i<korA.length; i++ ) { %>
-        <div class="card col col-md-6 col-12" style="width: 18rem">
+        <div class="card col col-md-6 col-12 basketItem" style="width: 18rem">
           <img
             src="../static/img/foodCategory/kor<%=i +1%>.webp"
             class="card-img-top"
@@ -84,7 +87,7 @@
         <%var wesA = [
         { name: "상해기", store: "마잇다키친", menu: "무한리필코스A", tel: "02-123-2345" },{ name: "문복희", store: "아웃백", menu: "스테이크, 코코넛쉬림프 등", tel: "02-123-2345" }];%>
         <% for( var i = 0; i<wesA.length; i++ ) { %>
-        <div class="card col col-md-6 col-12" style="width: 18rem">
+        <div class="card col col-md-6 col-12 basketItem" style="width: 18rem">
           <img
             src="../static/img/foodCategory/wes<%=i +1%>.webp"
             class="card-img-top"
@@ -111,7 +114,7 @@
         <%var desA = [
         { name: "시내", store: "편의점디저트", menu: "초콜릿우유아이스크림, 케이크 등", tel: "02-123-2345" }];%>
         <% for( var i = 0; i<desA.length; i++ ) { %>
-        <div class="card col col-md-6 col-12" style="width: 18rem">
+        <div class="card col col-md-6 col-12 basketItem" style="width: 18rem">
           <img
             src="../static/img/foodCategory/des<%=i +1%>.webp"
             class="card-img-top"
@@ -136,4 +139,13 @@
       </div>
     </div>
   </section>
+  <script>
+    function bookmark() {  
+      // console.log(this)
+      var test = document.getElementsByClassName('basketIcon span');
+      console.log(test);
+      // test.innerText = "aaa";
+      // this.span
+    };
+  </script>
 </div>

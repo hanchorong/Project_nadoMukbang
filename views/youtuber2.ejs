@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nado mukbang! 입짧은 햇님</title>
+    <!-- boot -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/c44f54db1d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/youtuberStyle.css" />
+    <!-- jq -->
+    <script src="../static/js/jq.js"></script>
+  </head>
+  <body class="youtuberPage">
+    <%-include("nav.ejs")%>
+    <section class="youSec1">
+      <div class="youtuberImg">
+        <div class="name">"입짧은 햇님"</div>
+      </div>
+    </section>
+    <section class="youSec2">
+      <div class="title"><i class="fa-solid fa-utensils"></i> </div>
+      <div class="foodCategory">
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        >
+          <i class="fa-solid fa-pizza-slice"></i><span>양식</span>
+        </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal">
+          <i class="fa-solid fa-ice-cream"></i><span>디저트</span>
+        </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        >
+          <i class="fa-solid fa-drumstick-bite"></i><span>치킨</span>
+        </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        ><i class="fa-solid fa-bowl-food"></i><span>한식</span></button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        >
+          <i class="fa-solid fa-bell-concierge"></i><span>중식</span>
+        </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#pizzaModal"
+        ><i class="fa-solid fa-fish-fins"></i><span>일식</span></button>
+      </div>
+    </section>
+    <!-- 양식 모달 -->
+    <div
+      class="modal fade"
+      id="pizzaModal"
+      tabindex="-1"
+      aria-labelledby="pizzaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pizzaModalLabel">
+              <i class="fa-solid fa-pizza-slice"></i> 양식
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modalContainer">
+              <div class="modalTitle">
+                <a href="https://www.youtube.com/watch?v=6rl3MIA9iOE" target="_blank">20220608 방송 <i class="fa-solid fa-square-arrow-up-right"></i></a>
+              </div>
+              <div class="content">
+                <img src="./../static/img/foodCategory/20220608.webp" alt="">
+                <ul class="storeInfo">
+                  <li><i class="fa-solid fa-store"></i></i>  '파스타입니다'</li>
+                  <li><i class="fa-solid fa-location-dot"></i> 서울 노원구 상계로5길 12 상가동 (동양마트건물2층)</li>
+                  <li><i class="fa-solid fa-phone-flip"></i> 070-4335-1848</li>
+                  <li><i class="fa-solid fa-circle-info"></i> 노원구 전체 양식 맛집랭킹 1위 파스타입니다</li>
+                </ul>
+              </div>
+              <div class="modalTitle">
+                <a href="https://www.youtube.com/watch?v=6rl3MIA9iOE" target="_blank">20210925 방송 <i class="fa-solid fa-square-arrow-up-right"></i></a>
+              </div>
+              <div class="content">
+                <img src="./../static/img/foodCategory/20210925.webp" alt="">
+                <ul class="storeInfo">
+                  <li><i class="fa-solid fa-store"></i></i>  '울프강 스테이크 하우스'</li>
+                  <li><i class="fa-solid fa-location-dot"></i> 서울 강남구 선릉로152길 21</li>
+                  <li><i class="fa-solid fa-phone-flip"></i> 0507-1486-8700</li>
+                  <li><i class="fa-solid fa-circle-info"></i> 네이버 예약을 통해 방문한 이용자로부터 가장 사랑받은 식당입니다.</li>
+                </ul>
+              </div>
+              <div class="modalTitle">
+                <a href="https://youtu.be/1Y7N17SyaPs" target="_blank">20181023 방송 <i class="fa-solid fa-square-arrow-up-right"></i></a>
+              </div>
+              <div class="content">
+                <img src="./../static/img/foodCategory/20181023.webp" alt="">
+                <ul class="storeInfo">
+                  <li><i class="fa-solid fa-store"></i></i>  ''더플레이스'</li>
+                  <li><i class="fa-solid fa-location-dot"></i> 서울 마포구 월드컵로1길 14 딜라이트 스퀘어 1차 상가 지하2층</li>
+                  <li><i class="fa-solid fa-phone-flip"></i> 02-336-0421</li>
+                  <li><i class="fa-solid fa-circle-info"></i> 프레시 마르게리따 피자 17,500원/ 고르곤졸라 피자 18,900원/ 리코타 샐러드 12,900원</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="youSec3">
+      <div class="title">햇님의 최근 먹방</div>
+      <hr />
+      <div class="listBox">
+        <div class="d-flex">
+          <a href="https://www.youtube.com/watch?v=KLWJCRMr-kg" target="_blank"
+            ><img class="lazy" data-src="../static/img/sun1.webp"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=Lm9JRlYxFG4" target="_blank"
+            ><img class="lazy" data-src="../static/img/sun2.webp"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=R8aq1ldy6EU" target="_blank"
+            ><img class="lazy" data-src="../static/img/sun3.webp"
+          /></a>
+        </div>
+        <div class="d-flex">
+          <a href="https://www.youtube.com/watch?v=G1zIFGb8Jw8" target="_blank"
+            ><img class="lazy" data-src="../static/img/sun4.webp"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=bUcmjb5v8Xc" target="_blank"
+            ><img class="lazy" data-src="../static/img/sun5.webp"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=SAaGfV8_sFI" target="_blank"
+            ><img class="lazy" data-src="../static/img/media4.webp"
+          /></a>
+        </div>
+      </div>
+    </section>
+    <%-include("footer.ejs")%>
+  </body>
+</html>

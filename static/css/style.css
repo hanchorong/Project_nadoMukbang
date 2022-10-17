@@ -120,6 +120,20 @@ nav .logo:hover a {
   box-shadow: 0 7px 6px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
 }
+#carouselExampleFade .carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #fcba03eb;
+  border-radius: 34%;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 0.8 !important;
+}
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  transform: scale(1.2);
+  opacity: 1 !important;
+}
 @media (max-width: 910px) {
   /* section1 title */
   .titleArea h1 {
@@ -372,6 +386,11 @@ section.sec1 .titleArea h1 span {
   margin-bottom: 1rem;
 }
 /* section3 */
+.cateMainTitle {
+  font-weight: 700;
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+}
 .sec3 {
   width: 100%;
 }
@@ -475,7 +494,7 @@ footer ul li {
   color: var(--sub-green);
 }
 /* basket */
-.basketIcon {
+/* .basketIcon {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 100%;
@@ -526,4 +545,4 @@ footer ul li {
 }
 .white {
   color: #fff !important;
-}
+} */

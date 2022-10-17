@@ -32,3 +32,6 @@ app.get("/promotion", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
+app.get("/youtuber2", (req, res) => {
+  res.render("youtuber2");
+});

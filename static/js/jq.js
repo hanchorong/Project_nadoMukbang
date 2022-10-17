@@ -20,16 +20,8 @@ $(function () {
     if (name == "입짧은 햇님" || name == "입짧은" || name == "햇님") {
       console.log("성공");
       window.location.replace("/youtuber1");
-    } else if (name == "쯔양") {
-      window.location.replace("/youtuber1");
-    } else if (name == "히밥") {
-      window.location.replace("/youtuber1");
-    } else if (name == "웅이") {
-      window.location.replace("/youtuber1");
-    } else if (name == "여수언니" || name == "여수") {
-      window.location.replace("/youtuber1");
-    } else if (name == "문복희" || name == "복희") {
-      window.location.replace("/youtuber1");
+    } else {
+      alert("준비중인 유튜버 페이지 입니다!");
     }
   });
 
@@ -37,6 +29,7 @@ $(function () {
   $("#loginSubmit").on("click", function () {
     var id = $("#userId").val();
     var password = $("#userPassword").val();
+
     if (id == "" && password == "") {
       $("#userId + span").text("아이디를 입력하세요.");
       $("#userPassword + span").text("비밀번호를 입력하세요.");
@@ -47,36 +40,30 @@ $(function () {
       $("#userId + span").text("아이디를 입력하세요.");
       $("#userPassword + span").text("");
     } else if (id == "userid" && password == "aaa") {
-      alert("로그인 성공임");
+      alert("로그인 성공");
+      window.location.replace("/");
     } else if (id !== "userid" || password !== "aaa") {
       alert("아이디 또는 비밀번호가 틀립니다.");
     }
   });
+
   // menu_2 section3
   $(".foodCategory button").on("click", function () {
-    // console.log($(this).attr("id"));
     var title = $(this).attr("id");
-    if (title == "chicken") {
-      $(".ViewArea .chicken").css("display", "flex");
-      title = "치킨";
-      $(".cateTitle").text(title);
-      $("div.chicken").siblings().css("display", "none");
-    } else if (title == "kor") {
-      $(".ViewArea .kor").css("display", "flex");
-      title = "한식";
-      $(".cateTitle").text(title);
-      $("div.kor").siblings().css("display", "none");
-    } else if (title == "western") {
-      $(".ViewArea .wes").css("display", "flex");
-      title = "양식";
-      $(".cateTitle").text(title);
-      $("div.wes").siblings().css("display", "none");
-    } else if (title == "desert") {
-      $(".ViewArea .des").css("display", "flex");
-      title = "디저트";
-      $(".cateTitle").text(title);
-      $("div.des").siblings().css("display", "none");
-    }
+    var data = {
+      western: "양식",
+      desert: "디저트",
+      chicken: "치킨",
+      kor: "한식",
+      chi: "중식",
+      jap: "일식",
+    };
+
+    $(".ViewArea ." + title).css("display", "flex");
+    $(".cateTitle").text(data[title]);
+    $("div." + title)
+      .siblings()
+      .css("display", "none");
   });
 
   // scroll lazy_image
@@ -102,6 +89,14 @@ $(function () {
     var mail = $("#contactMail").val();
     var text = $("#contactText").val();
 
+    var option = {
+      advertising: "광고",
+      launching: "입점",
+      site: "오류",
+      suggest: "건의",
+    };
+    $(".op").text(option[selectOp]);
+
     if (
       selectOp == null ||
       name == "" ||
@@ -121,20 +116,6 @@ $(function () {
       $(".alert1").css({
         display: "none",
       });
-
-      if (selectOp == "advertising") {
-        selectOp = "광고";
-        $(".op").text(selectOp);
-      } else if (selectOp == "launching") {
-        selectOp = "입점";
-        $(".op").text(selectOp);
-      } else if (selectOp == "site") {
-        selectOp = "사이트 오류";
-        $(".op").text(selectOp);
-      } else if (selectOp == "suggest") {
-        selectOp = "건의";
-        $(".op").text(selectOp);
-      }
 
       $(".contactName").text(name);
       $(".contactTel").text(tel);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로그인 페이지</title>
+    <title>회원가입 페이지</title>
     <!-- axios -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
@@ -50,37 +50,46 @@
     <!-- custom css -->
     <link rel="stylesheet" href="../static/css/style.css" />
     <link rel="stylesheet" href="../static/css/youtuberStyle.css" />
-    <link rel="stylesheet" href="../static/css/login.css" />
+    <link rel="stylesheet" href="../static/css/signUp.css" />
+    <!-- jq -->
+    <script src="../static/js/jq.js"></script>
   </head>
   <body>
-    <div class="login">
-      <div class="loginBox shadow">
+    <div class="signup">
+      <div class="signupBox shadow">
         <a class="logo" href="/">nado mukbang</a>
-        <form id="loginform" class="inputArea">
-          <div>
-            <input type="email" id="userMail" placeholder="이메일" required />
-            <span></span>
-          </div>
-          <div>
-            <input
-              type="password"
-              id="userPassword"
-              placeholder="비밀번호"
-              autocomplete="off"
-              required
-            />
-            <span></span>
-          </div>
-          <input type="submit" id="loginSubmit" value="Login" />
-          <hr />
-          <div class="bottom">
-            <a href="#">아이디/비밀번호 찾기</a>
-            <a href="/sign_up">회원가입</a>
-          </div>
-        </form>
+        <div class="inputArea">
+          <form id="signupForm">
+            <div class="emailArea">
+              <input type="email" id="userEmail" placeholder="이메일" />
+
+              <input type="button" id="userEmailCheckBtn" value="중복확인" />
+            </div>
+            <div class="passwordArea">
+              <input
+                class="test"
+                type="password"
+                id="userPassword"
+                placeholder="비밀번호 설정"
+                required
+                autocomplete="off"
+              />
+              <span></span>
+              <input
+                class="test"
+                type="password"
+                id="userPasswordConfirm"
+                placeholder="비밀번호 확인"
+                required
+                autocomplete="off"
+              />
+              <span></span>
+            </div>
+            <input type="submit" id="signupSubmit" value="회원가입" />
+          </form>
+        </div>
       </div>
     </div>
-
-    <script src="../static/js/login.js"></script>
+    <script src="./../static/js/signup.js"></script>
   </body>
 </html>

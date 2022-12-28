@@ -20,6 +20,9 @@ app.get("/youtuber1", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login");
 });
+app.get("/sign_up", (req, res) => {
+  res.render("sign_up");
+});
 app.get("/menu_1", (req, res) => {
   res.render("menu_1");
 });

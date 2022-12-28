@@ -30,6 +30,9 @@ button {
   --sub-color: #d2420b;
   --sub-green: #198754;
 }
+.none {
+  display: none;
+}
 nav {
   position: fixed;
   z-index: 10;
@@ -78,7 +81,7 @@ nav .logo {
 nav .logo:hover a {
   color: var(--sub-color);
 }
-#login {
+.logStyle {
   position: absolute;
   padding: 0.7rem 0.85rem;
   background-color: var(--main-color);
@@ -86,6 +89,9 @@ nav .logo:hover a {
   right: 2rem;
   color: #fff;
   font-family: "Fredoka One", cursive;
+}
+#logOut {
+  background-color: #d2420b;
 }
 .logo {
   font-family: "Fredoka One", cursive;
@@ -211,18 +217,7 @@ nav .logo:hover a {
   .listBox .d-flex a {
     width: 80vw;
   }
-  /* .promotion3 .textArea {
-    top: 50% !important;
-    right: 0 !important;
-    transform: translateY(-50%) !important;
-    width: 75vw;
-  } */
-  /* .promotion3 .tel {
-    position: absolute;
-    top: -55% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-  } */
+
   /* contact */
   .contact .view {
     flex-direction: column;
@@ -493,56 +488,3 @@ footer ul li {
   font-size: 1rem;
   color: var(--sub-green);
 }
-/* basket */
-/* .basketIcon {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 100%;
-  background-color: #d2420bcf;
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 10;
-  text-align: center;
-  line-height: 3.7rem;
-}
-.basketIcon i {
-  font-size: 2rem;
-  color: #fff;
-}
-.basketIcon span {
-  font-size: 0.8rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 100%;
-  background-color: var(--sub-green);
-  position: absolute;
-  right: 0;
-  top: 0;
-  line-height: 1.5rem;
-  color: #fff;
-}
-.basketItem {
-  cursor: pointer;
-  position: relative;
-}
-.basketItem #basketAdd {
-  position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-}
-.basketItem #basketAdd i {
-  font-size: 0.8rem;
-  color: #fff;
-}
-.basketItem:hover #basketAdd i {
-  color: var(--sub-green);
-  font-size: 2rem;
-  text-shadow: 2px 2px 3px #000;
-}
-.green {
-  color: "green" !important;
-}
-.white {
-  color: #fff !important;
-} */

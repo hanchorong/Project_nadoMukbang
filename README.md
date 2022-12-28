@@ -26,4 +26,6 @@
 - node.js
 - ejs
 
+### 자세한 내용 확인하기
+https://choronghan.notion.site/nado-mukbang-ea2c6b7ce6bf4a05bd43846bf9ea656b
 
